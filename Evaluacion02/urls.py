@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from sayayinApp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.index),
+    path('listado/', views.listado),
+    path('agregar/', views.agregar),
+    path('eliminar/<int:id>', views.eliminar),
+    path('actualizar/<int:id>', views.actualizar),
 ]
